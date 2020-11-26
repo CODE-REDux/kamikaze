@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+  
+ 
+
+
+ {% block content %}
+   <form method="get">
+     {{ filter.form.as_p }}
+     <button type="submit">Search</button>
+   </form>
+   <ul>
+   {% for rank in filter.qs  %}
+   <li class="{% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}">
+    <span>{{ rank.institute_name }} | </span> 
+    <span>{{ rank.branch_name }} | </span>
+    <span>{{ rank.allotted_quota }} | </span> 
+    <span>{{ rank.category }} | </span> 
+    <span>{{ rank.seat_pool }} | </span> 
+    <span>{{ rank.opening_rank }} | </span> 
+    <span>{{ rank.closing_rank }} | </span> 
+ </li>
+ <!-- <tr>
+  <th>{{ rank.institute_name }}</th> 
+  <td>{{ rank.branch_name }}</td>
+  <td>{{ rank.allotted_quota }}</td> 
+  <td>{{ rank.category }}</td> 
+  <td>{{ rank.seat_pool }}</td> 
+  <td>{{ rank.opening_rank }}</td> 
+  <td>{{ rank.closing_rank }}</td> 
+ </tr> -->
+   {% endfor %}
+   </ul>
+ {% endblock %}
