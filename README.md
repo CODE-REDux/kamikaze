@@ -5,3 +5,7 @@ THIS ALSO PROVIDES A PLATFORM FOR DISCUSSION , WHICH IS STILL UNDER PROGRESS.
 SOME LINKS ARE METIONED IN THE WEBSITE ALSO FOR FURTHER CONSULTANCY.
 
 # this is under active development
+
+# Local Development 
+
+this is being locally developed by repala sudhamsh and mohit lunia.
